@@ -9,8 +9,8 @@ except ValueError:
     print("you entered not a number")
 else:
     if 99 < abs(number) < 1000:
-      sum = (int(number / 100)) + (abs(int(number / 10)) % 10) + (abs(number) % 10)
-      product = (int(number / 100)) * (abs(int(number / 10)) % 10) * (abs(number) % 10)
-      print(f"number: {number}\nsum = {sum}\nproduct = {product}\n")
+        sum = (int(number / 100)) + (abs(int(number / 10)) % 10) + (abs(number) % 10)
+        product = (int(number / 100)) * (abs(int(number / 10)) % 10) * (abs(number) % 10)
+        print(f"number: {number}\nsum = {sum}\nproduct = {product}\n")
     else:
-      print("you entered not a three-digit number") 
+        print("you entered not a three-digit number")

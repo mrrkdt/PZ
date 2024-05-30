@@ -1,4 +1,4 @@
-#1
+# 1
 # Найти сумму чисел ряда 1,2,3,4,... от числа n до числа m.
 # Суммирование оформить функцией с параметрами. Значения n и m программа должна запрашивать.
 
@@ -8,10 +8,11 @@
 
 # функция
 def sum_number(begin, end):
-  sum = 0
-  for n in range(begin, end+1):
-    sum += n
-  return sum
+    sum = 0
+    for n in range(begin, end + 1):
+        sum += n
+    return sum
+
 
 # переменные
 n = input("Enter n: ")
@@ -19,22 +20,23 @@ m = input("Enter m: ")
 
 # обработка исключений
 while type(n) != int:
-  try:
-    n = int(n)
-  except ValueError:
-    n = input("Enter n: ")
+    try:
+        n = int(n)
+    except ValueError:
+        n = input("Enter n: ")
 
 while type(m) != int:
-  try:
-    m = int(m) if int(m) >= n else int(input("Enter m (m >= n): "))
-  except ValueError:
-    m = input("Enter m: ")
-
+    try:
+        m = int(m) if int(m) >= n else int(input("Enter m (m >= n): "))
+    except ValueError:
+        m = input("Enter m: ")
 
 print(f"the sum of a series of numbers from {n} to {m}: {sum_number(n, m)}")
-##################################################################################
-#2
-Описать функцию Power(A, B) вещественного типа,
+
+# _________________________________________________________________________________________
+
+# 2
+# Описать функцию Power(A, B) вещественного типа,
 # находящую величину AB по формуле AB = exp(B*ln(A)) (параметры A и B — вещественные).
 # В случае нулевого или отрицательного параметра A функция возвращает 0.
 # С помощью этой функции найти степени A^P, B^P, C^P, если даны числа P, A, B, C.
@@ -48,11 +50,12 @@ print(f"the sum of a series of numbers from {n} to {m}: {sum_number(n, m)}")
 
 import cmath
 
+
 # функция
 def power(A, B):
-  if A <= 0:
-    return 0
-  return cmath.exp(B*cmath.log10(A))
+    if A <= 0:
+        return 0
+    return cmath.exp(B * cmath.log10(A))
 
 
 # переменные
@@ -61,31 +64,30 @@ B = input("Enter B: ")
 C = input("Enter C: ")
 P = input("Enter P: ")
 
-
 # обработка исключений
 while type(A) != int:
-  try:
-    A = int(A)
-  except ValueError:
-    A = input("Enter A: ")
+    try:
+        A = int(A)
+    except ValueError:
+        A = input("Enter A: ")
 
 while type(B) != int:
-  try:
-    B = int(B)
-  except ValueError:
-    B = input("Enter B: ")
+    try:
+        B = int(B)
+    except ValueError:
+        B = input("Enter B: ")
 
 while type(C) != int:
-  try:
-    C = int(C)
-  except ValueError:
-    C = input("Enter C: ")
+    try:
+        C = int(C)
+    except ValueError:
+        C = input("Enter C: ")
 
 while type(P) != int:
-  try:
-    P = int(P)
-  except ValueError:
-    P = input("Enter P: ")
+    try:
+        P = int(P)
+    except ValueError:
+        P = input("Enter P: ")
 
 # вывод
 print(f"{A}^{P} = {power(A, P)}")

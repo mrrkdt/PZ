@@ -13,46 +13,46 @@ c = input("Enter three number: ")
 
 # обработка исключений
 while type(a) != int:
-  try:
-    a = int(a)
-    if a > 0: count += 1
-  except ValueError:
-    a = input("Enter one number: ")
+    try:
+        a = int(a)
+        if a > 0: count += 1
+    except ValueError:
+        a = input("Enter one number: ")
 
 while type(b) != int:
-  try:
-   b = int(b)
-   if b > 0: count += 1
-  except ValueError:
-    b = input("Enter two number: ")
+    try:
+        b = int(b)
+        if b > 0: count += 1
+    except ValueError:
+        b = input("Enter two number: ")
 
 while type(c) != int:
-  try:
-    c = int(c)
-    if c > 0: count += 1
-  except ValueError:
-    c = input("Enter three number: ")
-
+    try:
+        c = int(c)
+        if c > 0: count += 1
+    except ValueError:
+        c = input("Enter three number: ")
 
 # проверка на истинность условия и вывод результата
 if count == 3:
-  print("false")
-  print("Exactly three out of three numbers are positive")
+    print("false")
+    print("Exactly three out of three numbers are positive")
 
 elif count == 2:
-  print("true :)")
-  print("Exactly two out of three numbers are positive")
+    print("true :)")
+    print("Exactly two out of three numbers are positive")
 
 elif count == 1:
-  print("false")
-  print("Exactly one out of three numbers are positive")
+    print("false")
+    print("Exactly one out of three numbers are positive")
 
 elif count == 0:
-  print("false")
-  print("None of the three numbers is positive")
+    print("false")
+    print("None of the three numbers is positive")
 else:
-  print("We've reached what we shouldn't have")
-###############################################################
+    print("We've reached what we shouldn't have")
+
+# _________________________________________________________________________________________
 
 # Даны три целых числа, одно из которых отлично от двух других, равных между собой.
 # Определить порядковый номер числа, отличного от остальных
@@ -69,26 +69,26 @@ c = input("Enter three number: ")
 
 # обработка исключений
 while type(a) != int:
-  try:
-    a = int(a)
-  except ValueError:
-    a = input("Enter one number: ")
+    try:
+        a = int(a)
+    except ValueError:
+        a = input("Enter one number: ")
 
 while type(b) != int:
-  try:
-   b = int(b)
-  except ValueError:
-    b = input("Enter two number: ")
+    try:
+        b = int(b)
+    except ValueError:
+        b = input("Enter two number: ")
 
 while type(c) != int:
-  try:
-    c = int(c)
-  except ValueError:
-    c = input("Enter three number: ")
+    try:
+        c = int(c)
+    except ValueError:
+        c = input("Enter three number: ")
 
 # проверка на истинность условия и вывод результата
 if a == b == c:
-  print("All three numbers are the same")
+    print("All three numbers are the same")
 elif a == b and c != a:
     print("index number: 3")
 elif a == c and b != a:
@@ -98,4 +98,4 @@ elif b == c and a != c:
 elif a != b != c:
     print("All three numbers are different")
 else:
-   print("We've reached what we shouldn't have")
+    print("We've reached what we shouldn't have")
