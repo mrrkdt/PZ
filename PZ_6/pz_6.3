@@ -1,0 +1,35 @@
+# Дан список A размера N и целое число K (1 < K < 4, K < N ). Осуществить
+# циклический сдвиг элементов списка вправо на K позиций (при этом A1 перейдет в
+# AK+1, A2 —вAK+2, ..., AN —вAK). Допускается использовать вспомогательный
+# список из 4 элементов.
+# -> 7
+# -> 1 2 3 4 5 6 7
+# <- 5 6 7 1 2 3 4
+
+import random
+
+
+# функция для сдвига
+def shift(lst, steps):
+    # позволяет сдвигать элементы списка на указанное количество шагов влево или вправо.
+    if steps < 0:
+        steps = abs(steps)
+    for i in range(steps):
+        lst.append(lst.pop(0))
+    else:
+        for i in range(steps):
+            lst.insert(0, lst.pop())
+
+
+# создание списка и его заполнение
+N = int(input("\nEnter size: "))
+A = list()
+
+for i in range(N):
+    A.append(random.randrange(1, N))
+K = int(input("Enter K: "))
+
+# работа функции
+print("Before:", *A)
+shift(A, K)
+print("After: ", *A)
